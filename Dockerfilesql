@@ -1,0 +1,14 @@
+# Usa la imagen oficial de MySQL como base
+FROM mysql
+
+# Variables de entorno para la configuración de la base de datos
+ENV MYSQL_ROOT_PASSWORD=root_password
+ENV MYSQL_DATABASE=my_database
+ENV MYSQL_USER=my_user
+ENV MYSQL_PASSWORD=my_password
+
+# Copia el script SQL de inicialización al directorio '/docker-entrypoint-initdb.d'
+COPY my-init-script.sql /docker-entrypoint-initdb.d/
+
+# Expone el puerto 3306 para que se puedan realizar conexiones a la base de datos
+EXPOSE 3306
