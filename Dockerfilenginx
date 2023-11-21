@@ -1,0 +1,11 @@
+# Usa la imagen oficial de Nginx como base
+FROM nginx
+
+# Copia el contenido del directorio 'html' al directorio '/usr/share/nginx/html' en el contenedor
+COPY html/ /usr/share/nginx/html
+
+# Expone el puerto 80 para que se pueda acceder al servidor web
+EXPOSE 80
+
+# Comando que se ejecutará al iniciar el contenedor
+CMD ["nginx", "-g", "daemon off;"]
