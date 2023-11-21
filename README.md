@@ -13,8 +13,5 @@ Utiliza los comandos que te propociono para levantar cada contenedor
 2. docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
 3. docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql *se descargara la ultima version*
 
-<<<<<<< Updated upstream
 Putivuelta, dar una vuelta para ver el panorama de la discoteca o botellon
-=======
 Lucia Albi Vidal
->>>>>>> Stashed changes
